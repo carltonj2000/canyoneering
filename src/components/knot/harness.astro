@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import KnotCard from "./knotCard.astro";
+
+import emergencyHarness from "./emergencyHarness.png";
+import swissSeat2Back from "./swissSeatBack.webp";
+import swissSeat2Front from "./swissSeatFront.webp";
+
+const name = "Emergency Harness";
+const link = "https://www.animatedknots.com/hasty-harness-knot";
+---
+
+<KnotCard {name} {link}>
+  <Image src={emergencyHarness} alt={name} />
+  <p>
+    If you forget or have issue with your primary harness an emergency harness
+    can be constructed. A
+    <a
+      href="https://www.instructables.com/How-to-Tie-a-Swiss-Seat/"
+      class="text-md text-blue-400">Swiss Seat</a
+    >
+     is another harness setup and pictures follows.
+  </p>
+  <div class="flex max-w-xl">
+    <Image src={swissSeat2Front} alt="Swiss Seat Front" width="200" />
+    <Image src={swissSeat2Back} alt="Swiss Seat Back" width="200" />
+  </div>
+</KnotCard>
