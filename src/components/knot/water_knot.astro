@@ -1,0 +1,16 @@
+---
+import { Image } from "astro:assets";
+import KnotCard from "./knotCard.astro";
+
+import waterKnot from "./waterKnot.png";
+import wraptwopulloneanchor from "./wraptwopulloneanchor.jpg";
+
+const name = "Water Knot";
+const link = "https://www.animatedknots.com/water-knot";
+---
+
+<KnotCard {name} {link}>
+  <Image src={waterKnot} alt={name} />
+  <p>Used to tie webbing ends together. Usually used on a webbing anchor.</p>
+  <Image src={wraptwopulloneanchor} alt="Wrap 2 pull 1 anchor" />
+</KnotCard>
