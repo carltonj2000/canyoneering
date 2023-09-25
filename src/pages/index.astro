@@ -1,0 +1,20 @@
+---
+import Knots from "../components/knots.astro";
+import Nav from "../components/nav.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Canyoneering</title>
+  </head>
+  <body>
+    <Nav name="About" link="/about" />
+    <div class="max-w-2xl mx-auto">
+      <Knots />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+---
+const { name = "Name", link = "https://www.animatedknots.com/climbing-knots" } =
+  Astro.props;
+---
+
+<div
+  class="flex flex-col items-center bg-slate-50 px-4 py-2 rounded-lg shadow-lg"
+>
+  <div class="flex items-center justify-between w-full">
+    <h3 class="text-lg font-semibold mt-2 mb-1">{name}</h3>
+    <a href={link}>Tying Instructions</a>
+  </div>
+  <slot />
+</div>

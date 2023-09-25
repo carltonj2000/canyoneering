@@ -1,0 +1,22 @@
+---
+const { frontmatter } = Astro.props;
+import Nav from "../components/nav.astro";
+import "../styles/mdx.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Canyoneering</title>
+  </head>
+  <body>
+    <Nav />
+    <div class="max-w-lg mx-auto pt-2 flex items-center flex-col">
+      <h1 class="text-xl pb-3">{frontmatter.title} Page</h1>
+      <slot />
+    </div>
+  </body>
+</html>
