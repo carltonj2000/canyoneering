@@ -1,0 +1,14 @@
+---
+import { Image } from "astro:assets";
+import KnotCard from "./knotCard.astro";
+
+import purcellPrusik from "./images/purcellPrusik.png";
+
+const name = "Purcell Prusik Loop";
+const link = "https://www.animatedknots.com/purcell-prusik-loop-knot";
+---
+
+<KnotCard {name} {link}>
+  <Image src={purcellPrusik} alt={name} width="350" />
+  <p>An adjustable tether often used as a personal anchor system.</p>
+</KnotCard>

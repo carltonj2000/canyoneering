@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import KnotCard from "./knotCard.astro";
+
+import prusik from "./images/prusik.png";
+
+const name = "Prusik";
+const link = "https://www.animatedknots.com/prusik-knot";
+---
+
+<KnotCard {name} {link}>
+  <Image src={prusik} alt={name} width="350" />
+  <p>
+    A rope grab that is often used as a rappel autoblock or for ascending. Works
+    best when the prusik is 3mm smaller than the rope being grabbed.
+  </p>
+</KnotCard>

@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import KnotCard from "./knotCard.astro";
+
+import doubleFishermans from "./images/doubleFishermans.png";
+
+const name = "Double Fisherman's Bend";
+const link = "https://www.animatedknots.com/double-fishermans-bend-knot";
+---
+
+<KnotCard {name} {link}>
+  <Image src={doubleFishermans} alt={name} width="350" />
+  <p>
+    Ties two rope ends together. Often use to make slings/loops for rope grabs,
+    autoblocks, ascending, personal anchor systems, etc.
+  </p>
+</KnotCard>
