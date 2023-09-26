@@ -1,11 +1,11 @@
 FROM node:lts AS build
 WORKDIR /app
-COPY package.json package.json
-COPY package-lock.json package-lock.json
+COPY package*.json ./
 RUN npm i
 COPY . .
 RUN npm run build
 
-FROM httpd:2.4 AS runtime
-COPY --from=build /app/dist /usr/local/apache2/htdocs/canyoneering
-EXPOSE 80
+FROM nginx:alpine AS runtime
+COPY ./nginx.conf /etc/nginx/nginx.conf
+COPY --from=build /app/dist /usr/share/nginx/html/canyoneering
+EXPOSE 8080
