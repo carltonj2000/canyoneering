@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import KnotCard from "./knotCard.astro";
+
+import bowline from "./images/bowline.png";
+
+const name = "Bowline Knot";
+const link = "https://www.animatedknots.com/bowline-knot";
+---
+
+<KnotCard {name} {link}>
+  <Image src={bowline} alt={name} width="350" />
+  <p>
+    Often used to tie a fixed rope to a tree. A safty knot such as a double
+    overhand is used with the bowline because it can shake loose without it.
+  </p>
+</KnotCard>

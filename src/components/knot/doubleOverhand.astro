@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import KnotCard from "./knotCard.astro";
+
+import doubleOverhand from "./images/doubleOverhand.png";
+
+const name = "Double Overhand Stopper";
+const link = "https://www.animatedknots.com/double-overhand-stopper-knot";
+---
+
+<KnotCard {name} {link}>
+  <Image src={doubleOverhand} alt={name} width="350" />
+  <p>
+    This stopper knot can be used at the end of a rappel rope, a stopper for a
+    bowline, in a double fisherman's, etc.
+  </p>
+</KnotCard>
