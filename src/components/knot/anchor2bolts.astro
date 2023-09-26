@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import KnotCard from "./knotCard.astro";
+
+import twoBoltAnchorWithWebbing from "./images/twoBoltAnchorWithWebbing.jpg";
+
+const name = "Anchor On Two Bolts";
+const link = "https://www.canyoneeringusa.com/techtips/579";
+---
+
+<KnotCard {name} {link}>
+  <Image src={twoBoltAnchorWithWebbing} alt={name} width="350" />
+  <p>
+    Webbing attached to two bolts is redundant and distributes the weight to
+    rappel on to two bolts.
+  </p>
+</KnotCard>
