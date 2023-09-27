@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import KnotCard from "./knotCard.astro";
+
+import munterMuleOverhand from "./images/munterMuleOverhand.png";
+
+const name = "Munter Mule Overhand";
+const link = "https://www.animatedknots.com/munter-mule-combination-hitch-knot";
+---
+
+<KnotCard {name} {link}>
+  <Image src={munterMuleOverhand} alt={name} width="350" />
+  <p>
+    Often used instead of clove hitch on a caribiner in order to provide a
+    contigency to lower a person who is stuck or hurt on rappel.
+  </p>
+</KnotCard>
