@@ -11,7 +11,7 @@
     "d:b": "docker build -t carltonj2000/canyoneering .",
     "d:r": "docker run -t -d -p 8080:8080 carltonj2000/canyoneering",
     "d:p": "docker push carltonj2000/canyoneering",
-    "release": "npm run build && npm run d:b && npm run d:p"
+    "release": "npm run d:b && npm run d:p"
   },
   "dependencies": {
     "@astrojs/mdx": "^1.1.0",
