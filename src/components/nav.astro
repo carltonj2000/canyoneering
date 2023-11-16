@@ -7,5 +7,5 @@ const { name = "Home", link = "./" } = Astro.props;
     <img src="/favicon.svg" width="40" />
   </a>
   <h1 class="text-2xl text-slate-600 font-bold">Canyoneering</h1>
-  <a href="/about" class="bg-slate-400 px-2 py-1 rounded">{name}</a>
+  <a href={link} class="bg-slate-400 px-2 py-1 rounded">{name}</a>
 </nav>
