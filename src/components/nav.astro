@@ -3,12 +3,9 @@ const { name = "Home", link = "./" } = Astro.props;
 ---
 
 <nav class="flex justify-between bg-slate-300 items-center py-3 px-2">
-  <a href={import.meta.env.BASE_URL}>
-    <img src={`${import.meta.env.BASE_URL}/favicon.svg`} width="40" />
+  <a href="/">
+    <img src="/favicon.svg" width="40" />
   </a>
   <h1 class="text-2xl text-slate-600 font-bold">Canyoneering</h1>
-  <a
-    href={`${import.meta.env.BASE_URL}/${link}`}
-    class="bg-slate-400 px-2 py-1 rounded">{name}</a
-  >
+  <a href="/about" class="bg-slate-400 px-2 py-1 rounded">{name}</a>
 </nav>
